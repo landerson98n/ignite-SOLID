@@ -1,0 +1,43 @@
+{
+  "openapi":"3.0.0",
+  "info":{
+    "title": "User Node"
+  },
+  "paths": {
+    "/users":{
+      "post":{
+        "tags": ["User"],
+        "summary": "Create User",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Erro ao criar usuario"
+          }
+        },
+        "requestBody":{
+          "content": {
+            "application/json":{
+              "schema":{
+                "type": "object",
+                "properties":{
+                  "email": {
+                    "type": "string"
+                  },
+                  "name":{
+                    "type":"string"
+                  }
+                }
+              },
+              "example":{
+                "email":"landerson@example.com",
+                "name":"Landerson Miguel"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
